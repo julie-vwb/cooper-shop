@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>waray 🎨 - Cosmic Edition</title>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1a2a6c; /* Deep Blue */
+    --secondary: #b21f1f; /* Crimson */
+    --accent: #fdbb2d; /* Gold */
+    --bg-dark: #0f172a;
+    --card-bg: rgba(255, 255, 255, 0.08);
+    --text: #e2e8f0;
+    --text-gold: #fde68a;
+    --border: rgba(253, 187, 45, 0.3);
+  }
+  
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    font-family: 'Mitr', sans-serif;
+    background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+    min-height: 100vh;
+    color: var(--text);
+    overflow-x: hidden;
+  }
+
+  /* Star Animation */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: 
+      radial-gradient(1px 1px at 20px 30px, #eee, rgba(0,0,0,0)),
+      radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
+      radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0));
+    background-size: 200px 200px;
+    opacity: 0.3;
+    pointer-events: none; z-index: 0;
+  }
+
+  .sp { position:fixed; pointer-events:none; z-index:0; animation:fl 5s ease-in-out infinite; opacity:0.6; color: var(--accent); }
+  .sp:nth-child(1){top:4%;left:5%;font-size:22px;}
+  .sp:nth-child(2){top:12%;right:8%;font-size:14px;animation-delay:1s;}
+  .sp:nth-child(3){top:38%;left:2%;font-size:12px;animation-delay:2s;}
+  .sp:nth-child(4){top:55%;right:4%;font-size:20px;animation-delay:.5s;}
+  @keyframes fl {0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-15px) scale(1.2); opacity:0.8;}}
+
+  .wrap { max-width:480px; margin:0 auto; padding:16px 14px 60px; position:relative; z-index:1; }
+
+  /* HEADER */
+  .header { text-align:center; padding:35px 0 20px; animation:fadeUp .7s ease both; }
+  .logo-wrapper { margin-bottom: 15px; display: flex; justify-content: center; }
+  .logo-img {
+    width: 140px; height: 140px;
+    object-fit: cover; border-radius: 50%;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 25px rgba(253, 187, 45, 0.4);
+    background: #000;
+  }
+
+  .shop-name {
+    font-size:2.4rem; font-weight:700;
+    color: var(--accent);
+    letter-spacing:2px;
+    text-shadow: 0 0 10px rgba(253, 187, 45, 0.5);
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+  }
+  .shop-sub { font-size:.85rem; color: #cbd5e1; margin-top:8px; line-height:1.7; }
+
+  .badges { display:flex; justify-content:center; gap:7px; flex-wrap:wrap; margin-top:11px; }
+  .badge {
+    background: rgba(253, 187, 45, 0.1); border:1px solid var(--accent);
+    border-radius:20px; padding:4px 13px;
+    font-size:.72rem; color:var(--accent); font-weight:500;
+  }
+
+  /* CARDS */
+  .card {
+    background: var(--card-bg); backdrop-filter:blur(15px);
+    border: 1px solid var(--border);
+    border-radius:22px; padding:20px 18px; margin-bottom:14px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    animation:fadeUp .6s ease both;
+  }
+  
+  .ct { font-size:.98rem; font-weight:600; color:var(--accent); margin-bottom:13px; display:flex; align-items:center; gap:8px; }
+
+  /* Status */
+  .status-box {
+    background: linear-gradient(135deg, rgba(26,42,108,0.5), rgba(178,31,31,0.3));
+    border: 1px dashed var(--accent); border-radius:16px;
+    padding:15px; text-align:center; margin-bottom:14px;
+  }
+  .s-open { font-size:1.2rem; font-weight:600; color: var(--accent); }
+  .s-dot { display:inline-block; width:10px;height:10px; background:#4ade80; border-radius:50%; margin-right:8px; box-shadow:0 0 10px #4ade80; animation:blink 2s infinite; }
+  @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
+
+  /* Links & Content Styles */
+  .hi-box {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+    border-radius:16px; padding:13px 16px; color:#fff;
+    text-align:center; margin-bottom:12px;
+  }
+  
+  .lnk {
+    display:flex; align-items:center; gap:10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border); border-radius:14px;
+    padding:10px 14px; text-decoration:none; color:var(--text);
+    transition: .3s; margin-bottom:9px;
+  }
+  .lnk:hover { background: rgba(253, 187, 45, 0.1); transform: translateX(5px); }
+  .lnk-name { font-weight:600; color: var(--accent); }
+
+  .cta-btn {
+    display:inline-block; width:100%; max-width:300px;
+    background: linear-gradient(135deg, #fdbb2d, #b21f1f);
+    color:#fff; font-size:1.1rem; font-weight:600; padding:16px;
+    border-radius:50px; text-decoration:none;
+    box-shadow:0 10px 25px rgba(178,31,31,0.4);
+    animation: glow 3s infinite; text-align: center;
+  }
+  @keyframes glow{0%,100%{box-shadow:0 8px 20px rgba(253, 187, 45, 0.3);} 50%{box-shadow:0 12px 30px rgba(253, 187, 45, 0.6);}}
+
+  .footer { text-align:center; padding:20px; font-size:.75rem; color:#94a3b8; }
+  .soc {
+    background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+    border-radius:20px; padding:6px 15px; color:var(--accent); text-decoration:none; margin: 0 5px;
+  }
+
+  @keyframes fadeUp { from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);} }
+</style>
+</head>
+<body>
+
+<div class="sp">✦</div>
+<div class="sp">✨</div>
+<div class="sp">🌌</div>
+<div class="sp">⭐</div>
+
+<div class="wrap">
+  <div class="header">
+    <div class="logo-wrapper">
+      <img src="image.png" alt="Logo" class="logo-img">
+    </div>
+    <div class="shop-name">✦ waray ✦</div>
+    <div class="shop-sub">
+      🔮 รับรังสรรค์ป้ายและงานกราฟิกสไตล์พรีเมียม<br>
+      ดีไซน์หรูหรา โดดเด่น ไม่ซ้ำใคร
+    </div>
+    <div class="badges">
+      <span class="badge">💎 Premium Design</span>
+      <span class="badge">✨ Branding</span>
+      <span class="badge">🎨 Artworks</span>
+    </div>
+  </div>
+
+  <div class="status-box">
+    <div class="s-open"><span class="s-dot"></span>เปิดรับออเดอร์งานสวยๆ แล้วค่ะ</div>
+  </div>
+
+  <div class="card">
+    <div class="ct">📋 รายละเอียดการให้บริการ</div>
+    <div style="font-size:.88rem; line-height:1.8;">
+      <b style="color:var(--accent);">✧ งานเฮด & กราฟิกทั่วไป:</b> เริ่มต้น 35 ฿<br>
+      <b style="color:var(--accent);">✧ งาน Ads โฆษณา:</b> เริ่มต้น 69 ฿<br>
+      <b style="color:var(--accent);">✧ งานแนวเฉพาะทาง:</b> เริ่มต้น 79 ฿
+    </div>
+    <div class="hi-box" style="margin-top:15px; margin-bottom:0;">
+      <b>🌙 โปรโมชั่นพิเศษ: เหมา 3 ป้ายขึ้นไป ลดทันที!</b>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">📱 ช่องทางการติดต่อ</div>
+    <a href="https://www.facebook.com/share/1AjUVUizBm/" class="lnk" target="_blank">
+      <span style="font-size:1.5rem;">📘</span>
+      <div><div class="lnk-name">Facebook Page</div><div style="font-size:.75rem; color:#94a3b8;">ติดตามผลงานและโปรโมชั่น</div></div>
+    </a>
+    <a href="http://lin.ee/xC5xdEa" class="lnk" target="_blank">
+      <span style="font-size:1.5rem;">💚</span>
+      <div><div class="lnk-name">LINE Official</div><div style="font-size:.75rem; color:#94a3b8;">ทักแชทสอบถาม/สั่งงาน</div></div>
+    </a>
+  </div>
+
+  <div class="cta-wrap" style="text-align:center; margin-top:20px;">
+    <a href="http://lin.ee/xC5xdEa" class="cta-btn" target="_blank">
+      ✨ เริ่มต้นสั่งงานเลย ✨
+    </a>
+  </div>
+
+  <div class="footer">
+    <div style="margin-bottom:15px;">
+      <a href="#" class="soc">Facebook</a>
+      <a href="#" class="soc">Line</a>
+    </div>
+    <div>© 2026 waray Studio | Crafted with Magic 🌌</div>
+  </div>
+</div>
+
+</body>
+</html>
