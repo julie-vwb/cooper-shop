@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>waray 🎨 - Cosmic Edition</title>
+<title>Coopercliton 🎨</title>
 <link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --primary: #1a2a6c; /* Deep Blue */
-    --secondary: #b21f1f; /* Crimson */
-    --accent: #fdbb2d; /* Gold */
+    --primary: #1a2a6c;
+    --secondary: #b21f1f;
+    --accent: #fdbb2d;
     --bg-dark: #0f172a;
     --card-bg: rgba(255, 255, 255, 0.08);
     --text: #e2e8f0;
@@ -27,7 +27,6 @@
     overflow-x: hidden;
   }
 
-  /* Star Animation */
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -49,7 +48,6 @@
 
   .wrap { max-width:480px; margin:0 auto; padding:16px 14px 60px; position:relative; z-index:1; }
 
-  /* HEADER */
   .header { text-align:center; padding:35px 0 20px; animation:fadeUp .7s ease both; }
   .logo-wrapper { margin-bottom: 15px; display: flex; justify-content: center; }
   .logo-img {
@@ -61,7 +59,7 @@
   }
 
   .shop-name {
-    font-size:2.4rem; font-weight:700;
+    font-size:2.2rem; font-weight:700;
     color: var(--accent);
     letter-spacing:2px;
     text-shadow: 0 0 10px rgba(253, 187, 45, 0.5);
@@ -76,7 +74,6 @@
     font-size:.72rem; color:var(--accent); font-weight:500;
   }
 
-  /* CARDS */
   .card {
     background: var(--card-bg); backdrop-filter:blur(15px);
     border: 1px solid var(--border);
@@ -87,7 +84,6 @@
   
   .ct { font-size:.98rem; font-weight:600; color:var(--accent); margin-bottom:13px; display:flex; align-items:center; gap:8px; }
 
-  /* Status */
   .status-box {
     background: linear-gradient(135deg, rgba(26,42,108,0.5), rgba(178,31,31,0.3));
     border: 1px dashed var(--accent); border-radius:16px;
@@ -97,7 +93,6 @@
   .s-dot { display:inline-block; width:10px;height:10px; background:#4ade80; border-radius:50%; margin-right:8px; box-shadow:0 0 10px #4ade80; animation:blink 2s infinite; }
   @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
 
-  /* Links & Content Styles */
   .hi-box {
     background: linear-gradient(135deg, #1a2a6c, #b21f1f);
     border-radius:16px; padding:13px 16px; color:#fff;
@@ -112,7 +107,24 @@
     transition: .3s; margin-bottom:9px;
   }
   .lnk:hover { background: rgba(253, 187, 45, 0.1); transform: translateX(5px); }
-  .lnk-name { font-weight:600; color: var(--accent); }
+  .lnk-name { font-weight:600; color: var(--accent); font-size: 0.9rem; }
+  .lnk-desc { font-size: 0.75rem; color: #94a3b8; }
+
+  .steps { display:flex; flex-direction:column; gap:11px; }
+  .step { display:flex; gap:11px; align-items:flex-start; }
+  .sn {
+    width:28px;height:28px;border-radius:50%;
+    background: linear-gradient(135deg, var(--accent), var(--secondary));
+    display:flex;align-items:center;justify-content:center;
+    font-size:.78rem;font-weight:600;color:#fff;flex-shrink:0;
+  }
+  .st { font-size:.84rem; color:var(--text); padding-top:4px; line-height:1.6; }
+
+  .note {
+    background: rgba(178, 31, 31, 0.15);
+    border: 1px solid var(--secondary); border-radius:14px;
+    padding:13px 15px; font-size:.83rem; color:var(--text); line-height:1.8;
+  }
 
   .cta-btn {
     display:inline-block; width:100%; max-width:300px;
@@ -125,11 +137,6 @@
   @keyframes glow{0%,100%{box-shadow:0 8px 20px rgba(253, 187, 45, 0.3);} 50%{box-shadow:0 12px 30px rgba(253, 187, 45, 0.6);}}
 
   .footer { text-align:center; padding:20px; font-size:.75rem; color:#94a3b8; }
-  .soc {
-    background: rgba(255,255,255,0.05); border: 1px solid var(--border);
-    border-radius:20px; padding:6px 15px; color:var(--accent); text-decoration:none; margin: 0 5px;
-  }
-
   @keyframes fadeUp { from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);} }
 </style>
 </head>
@@ -145,58 +152,108 @@
     <div class="logo-wrapper">
       <img src="logo.jpeg" alt="Logo" class="logo-img">
     </div>
-    <div class="shop-name">✦ waray ✦</div>
+    <div class="shop-name">Coopercliton</div>
     <div class="shop-sub">
-      🔮 รับรังสรรค์ป้ายและงานกราฟิกสไตล์พรีเมียม<br>
-      ดีไซน์หรูหรา โดดเด่น ไม่ซ้ำใคร
+      ✨ สวัสดีค่ะ ยินดีต้อนรับสู่ร้านของเป้อนะคะ ✨<br>
+      เม่ค้าใจดี เฟรนลี่ คุยเล่นหรือปรึกษาได้นะคะ
     </div>
     <div class="badges">
-      <span class="badge">💎 Premium Design</span>
-      <span class="badge">✨ Branding</span>
-      <span class="badge">🎨 Artworks</span>
+      <span class="badge">🖼️ รับทำงานป้าย</span>
+      <span class="badge">🎨 ลงสีของตกแต่ง</span>
+      <span class="badge">🧱 ทำบล็อค</span>
     </div>
   </div>
 
   <div class="status-box">
-    <div class="s-open"><span class="s-dot"></span>เปิดรับออเดอร์งานสวยๆ แล้วค่ะ</div>
+    <div class="s-open"><span class="s-dot"></span>เปิดรับออเดอร์ & ปรึกษาได้ตลอดค่ะ</div>
   </div>
 
   <div class="card">
-    <div class="ct">📋 รายละเอียดการให้บริการ</div>
-    <div style="font-size:.88rem; line-height:1.8;">
-      <b style="color:var(--accent);">✧ งานเฮด & กราฟิกทั่วไป:</b> เริ่มต้น 35 ฿<br>
-      <b style="color:var(--accent);">✧ งาน Ads โฆษณา:</b> เริ่มต้น 69 ฿<br>
-      <b style="color:var(--accent);">✧ งานแนวเฉพาะทาง:</b> เริ่มต้น 79 ฿
-    </div>
-    <div class="hi-box" style="margin-top:15px; margin-bottom:0;">
-      <b>🌙 โปรโมชั่นพิเศษ: เหมา 3 ป้ายขึ้นไป ลดทันที!</b>
+    <div class="ct">📋 วิธีการสั่งงาน (โปรดอ่าน)</div>
+    <div class="steps">
+      <div class="step">
+        <div class="sn">1</div>
+        <div class="st">แจ้งแนวป้ายและจำนวน (ดูจากไดรฟ์ร้านเท่านั้น)</div>
+      </div>
+      <div class="step">
+        <div class="sn">2</div>
+        <div class="st">เลือกตูน / หัวป้าย / บล็อก หรือให้ร้านเลือกให้ได้ค่ะ</div>
+      </div>
+      <div class="step">
+        <div class="sn">3</div>
+        <div class="st">แจ้งรายละเอียดบรีฟให้ชัดเจน (โทนสี, ตัวตูน, แนวป้าย)</div>
+      </div>
+      <div class="step">
+        <div class="sn">4</div>
+        <div class="st">ชำระเงินเพื่อล็อคคิวงาน</div>
+      </div>
     </div>
   </div>
 
   <div class="card">
-    <div class="ct">📱 ช่องทางการติดต่อ</div>
-    <a href="https://www.facebook.com/share/1AjUVUizBm/" class="lnk" target="_blank">
-      <span style="font-size:1.5rem;">📘</span>
-      <div><div class="lnk-name">Facebook Page</div><div style="font-size:.75rem; color:#94a3b8;">ติดตามผลงานและโปรโมชั่น</div></div>
+    <div class="ct">🖼️ ตัวอย่างผลงานหลัก</div>
+    <a href="https://drive.google.com/drive/folders/1LUDNOpLgvTbU0evdFBrlsjHTGSzvqJlR" class="lnk" target="_blank">
+      <span style="font-size:1.2rem;">🖋️</span>
+      <div><div class="lnk-name">Scribbles</div><div class="lnk-desc">ดูตัวอย่างงานสไตล์ Scribbles</div></div>
     </a>
-    <a href="http://lin.ee/xC5xdEa" class="lnk" target="_blank">
-      <span style="font-size:1.5rem;">💚</span>
-      <div><div class="lnk-name">LINE Official</div><div style="font-size:.75rem; color:#94a3b8;">ทักแชทสอบถาม/สั่งงาน</div></div>
+    <a href="https://drive.google.com/drive/folders/1Le0B0Ql4FSXM-1SJXQZqgCtLgocpBdp4" class="lnk" target="_blank">
+      <span style="font-size:1.2rem;">✨</span>
+      <div><div class="lnk-name">Aurelia</div><div class="lnk-desc">ดูตัวอย่างงานสไตล์ Aurelia</div></div>
+    </a>
+    <a href="https://drive.google.com/drive/folders/15tuYmiiU89W36OW-URROaELfD7rgMv0R" class="lnk" target="_blank">
+      <span style="font-size:1.2rem;">🎨</span>
+      <div><div class="lnk-name">รวมงานรองอื่นๆ</div><div class="lnk-desc">ดูตัวอย่างงานสไตล์อื่นๆ ของร้าน</div></div>
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="ct">📦 บล็อคและของตกแต่ง</div>
+    <a href="https://drive.google.com/drive/folders/1or5RTLlIciM7VRJsukLMHWWwso9VC71i" class="lnk" target="_blank">
+      <span style="font-size:1.2rem;">🧱</span>
+      <div><div class="lnk-name">งานทำบล็อค</div></div>
+    </a>
+    <a href="https://drive.google.com/drive/folders/1m40PQaAH3HNtpzIawu3_-Wol8-3C3z5C" class="lnk" target="_blank">
+      <span style="font-size:1.2rem;">💎</span>
+      <div><div class="lnk-name">งานลงสีของตกแต่ง</div></div>
+    </a>
+    <a href="https://drive.google.com/drive/folders/1Ew0x8gy-6g9WZG5k8CPtOzF0ND1Y-1bY" class="lnk" target="_blank">
+      <span style="font-size:1.2rem;">📚</span>
+      <div><div class="lnk-name">คลังรวมของแต่ง/ตูน/บล็อค</div></div>
+    </a>
+  </div>
+
+  <div class="card">
+    <div class="ct">⏱️ ระยะเวลาการทำงาน</div>
+    <div class="hi-box">
+      <b>ปกติ: 1 - 3 วัน</b><br>
+      <small>(หากไม่ติดธุระ 1 วันเสร็จค่ะ)</small>
+    </div>
+    <div class="hi-box" style="margin-bottom:0; background: var(--secondary);">
+      <b>เร่งด่วน: ราคา x2 (ได้งานวันที่สั่ง)</b>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="ct">📌 หมายเหตุสำคัญ</div>
+    <div class="note">
+      ⚠️ ไม่รับทำเรฟหรือบรีฟจากร้านอื่น<br>
+      ⚠️ กรณีให้ร้านเลือกให้ทุกอย่าง หากไม่ถูกใจ<b>ไม่แก้ให้ทุกกรณี</b><br>
+      ⚠️ ชำระเงินแล้ว = ยอมรับกฎของทางร้าน
+    </div>
+    <a href="https://docs.google.com/spreadsheets/d/1h6n06A4IG4Dn7IYZcLzpEphyuA8YkIHyMAEFw2bEhoQ/edit?usp=drivesdk" class="lnk" target="_blank" style="margin-top:10px;">
+      <span style="font-size:1.2rem;">📊</span>
+      <div><div class="lnk-name">เช็คคิวงานที่นี่</div></div>
     </a>
   </div>
 
   <div class="cta-wrap" style="text-align:center; margin-top:20px;">
-    <a href="http://lin.ee/xC5xdEa" class="cta-btn" target="_blank">
-      ✨ เริ่มต้นสั่งงานเลย ✨
+    <a href="https://www.facebook.com/share/1AjUVUizBm/" class="cta-btn" target="_blank">
+      💫 สั่งงาน / สอบถาม 💫
     </a>
   </div>
 
   <div class="footer">
-    <div style="margin-bottom:15px;">
-      <a href="#" class="soc">Facebook</a>
-      <a href="#" class="soc">Line</a>
-    </div>
-    <div>© 2026 waray Studio | Crafted with Magic 🌌</div>
+    <div>© 2026 Coopercliton Studio | Crafted with Heart 🌌</div>
   </div>
 </div>
 
