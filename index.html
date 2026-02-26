@@ -8,13 +8,12 @@
 <style>
   :root {
     --primary: #1a2a6c;
-    --darker: #070b1a; /* สีน้ำเงินดำเข้มกว่าพื้นหลัง */
+    --darker: #070b1a; 
     --accent: #fdbb2d;
     --accent-soft: #fef3c7; 
     --bg-dark: #0f172a;
     --card-bg: rgba(255, 255, 255, 0.08);
     --text: #e2e8f0;
-    --text-gold: #fde68a;
     --border: rgba(253, 187, 45, 0.3);
   }
   
@@ -28,6 +27,7 @@
     overflow-x: hidden;
   }
 
+  /* เอฟเฟกต์ดาวตกพื้นหลัง */
   body::before {
     content: '';
     position: fixed; inset: 0;
@@ -36,7 +36,7 @@
       radial-gradient(1px 1px at 40px 70px, #fff, rgba(0,0,0,0)),
       radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0));
     background-size: 200px 200px;
-    opacity: 0.3;
+    opacity: 0.4;
     pointer-events: none; z-index: 0;
   }
 
@@ -83,7 +83,32 @@
     animation:fadeUp .6s ease both;
   }
   
-  .ct { font-size:.98rem; font-weight:600; color:var(--accent); margin-bottom:13px; display:flex; align-items:center; gap:8px; }
+  .ct { font-size:.98rem; font-weight:600; color:var(--accent); margin-bottom:15px; display:flex; align-items:center; gap:8px; }
+
+  /* Grid สำหรับงานหลัก 4 ช่อง */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 5px;
+  }
+  .grid-item {
+    background: linear-gradient(145deg, var(--primary), var(--darker));
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 20px 10px;
+    text-decoration: none;
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+  .grid-item:hover { transform: scale(1.03); background: rgba(253, 187, 45, 0.15); }
+  .grid-title { color: var(--accent); font-weight: 700; font-size: 0.95rem; }
+  .grid-sub { color: #94a3b8; font-size: 0.7rem; }
 
   .status-box {
     background: linear-gradient(135deg, rgba(26,42,108,0.5), rgba(15,23,42,0.3));
@@ -110,12 +135,11 @@
   }
   .lnk:hover { background: rgba(253, 187, 45, 0.1); transform: translateX(5px); }
   .lnk-name { font-weight:600; color: var(--accent); font-size: 0.9rem; }
-  .lnk-desc { font-size: 0.75rem; color: #94a3b8; }
 
   .steps { display:flex; flex-direction:column; gap:11px; }
   .step { display:flex; gap:11px; align-items:flex-start; }
   
-  /* ปรับสีวงกลมตัวเลขเป็น น้ำเงินดำ */
+  /* วงกลมตัวเลขสีน้ำเงินดำ */
   .sn {
     width:28px;height:28px;border-radius:50%;
     background: linear-gradient(135deg, #070b1a, #1a2a6c);
@@ -165,14 +189,40 @@
       แม่ค้าใจดี เฟรนลี่ คุยเล่นหรือปรึกษาได้นะคะ
     </div>
     <div class="badges">
-      <span class="badge">🖼️ รับทำงานป้าย</span>
-      <span class="badge">🎨 ลงสีของตกแต่ง</span>
-      <span class="badge">🧱 ทำบล็อค</span>
+      <span class="badge">🪽 รับทำงานป้าย</span>
+      <span class="badge">🧵 ลงสีของตกแต่ง</span>
+      <span class="badge">⭐️ ทำบล็อค</span>
     </div>
   </div>
 
   <div class="status-box">
     <div class="s-open"><span class="s-dot"></span>เปิดรับออเดอร์ & ปรึกษาได้ตลอดค่ะ</div>
+  </div>
+
+  <div class="card">
+    <div class="ct">💫 บริการและตัวอย่างงานหลัก</div>
+    <div class="grid-container">
+      <a href="https://drive.google.com/drive/folders/1LUDNOpLgvTbU0evdFBrlsjHTGSzvqJlR" class="grid-item" target="_blank">
+        <span style="font-size:1.8rem;">🪼</span>
+        <div class="grid-title">Scribbles</div>
+        <div class="grid-sub">แนวงานหลัก</div>
+      </a>
+      <a href="https://drive.google.com/drive/folders/1Le0B0Ql4FSXM-1SJXQZqgCtLgocpBdp4" class="grid-item" target="_blank">
+        <span style="font-size:1.8rem;">✨</span>
+        <div class="grid-title">Aurelia</div>
+        <div class="grid-sub">แนวงานหลัก</div>
+      </a>
+      <a href="https://docs.google.com/spreadsheets/d/1h6n06A4IG4Dn7IYZcLzpEphyuA8YkIHyMAEFw2bEhoQ/edit?usp=drivesdk" class="grid-item" target="_blank">
+        <span style="font-size:1.8rem;">🪡</span>
+        <div class="grid-title">เช็คคิวงาน</div>
+        <div class="grid-sub">อัปเดตสถานะ</div>
+      </a>
+      <a href="https://drive.google.com/drive/folders/15tuYmiiU89W36OW-URROaELfD7rgMv0R" class="grid-item" target="_blank">
+        <span style="font-size:1.8rem;">✨</span>
+        <div class="grid-title">งานทั่วไป</div>
+        <div class="grid-sub">รวมผลงานรอง</div>
+      </a>
+    </div>
   </div>
 
   <div class="card">
@@ -198,33 +248,17 @@
   </div>
 
   <div class="card">
-    <div class="ct">🖼️ ตัวอย่างผลงานหลัก</div>
-    <a href="https://drive.google.com/drive/folders/1LUDNOpLgvTbU0evdFBrlsjHTGSzvqJlR" class="lnk" target="_blank">
-      <span style="font-size:1.2rem;">🖋️</span>
-      <div><div class="lnk-name">Scribbles</div><div class="lnk-desc">ดูตัวอย่างงานสไตล์ Scribbles</div></div>
-    </a>
-    <a href="https://drive.google.com/drive/folders/1Le0B0Ql4FSXM-1SJXQZqgCtLgocpBdp4" class="lnk" target="_blank">
-      <span style="font-size:1.2rem;">✨</span>
-      <div><div class="lnk-name">Aurelia</div><div class="lnk-desc">ดูตัวอย่างงานสไตล์ Aurelia</div></div>
-    </a>
-    <a href="https://drive.google.com/drive/folders/15tuYmiiU89W36OW-URROaELfD7rgMv0R" class="lnk" target="_blank">
-      <span style="font-size:1.2rem;">🎨</span>
-      <div><div class="lnk-name">รวมงานรองอื่นๆ</div><div class="lnk-desc">ดูตัวอย่างงานสไตล์อื่นๆ ของร้าน</div></div>
-    </a>
-  </div>
-
-  <div class="card">
     <div class="ct">📦 บล็อคและของตกแต่ง</div>
     <a href="https://drive.google.com/drive/folders/1or5RTLlIciM7VRJsukLMHWWwso9VC71i" class="lnk" target="_blank">
-      <span style="font-size:1.2rem;">🧱</span>
+      <span style="font-size:1.2rem;">🫆</span>
       <div><div class="lnk-name">งานทำบล็อค</div></div>
     </a>
     <a href="https://drive.google.com/drive/folders/1m40PQaAH3HNtpzIawu3_-Wol8-3C3z5C" class="lnk" target="_blank">
-      <span style="font-size:1.2rem;">💎</span>
+      <span style="font-size:1.2rem;">🧜🏻‍♂️</span>
       <div><div class="lnk-name">งานลงสีของตกแต่ง</div></div>
     </a>
     <a href="https://drive.google.com/drive/folders/1Ew0x8gy-6g9WZG5k8CPtOzF0ND1Y-1bY" class="lnk" target="_blank">
-      <span style="font-size:1.2rem;">📚</span>
+      <span style="font-size:1.2rem;">✨</span>
       <div><div class="lnk-name">คลังรวมของแต่ง/ตูน/บล็อค</div></div>
     </a>
   </div>
@@ -247,15 +281,11 @@
       ⚠️ กรณีให้ร้านเลือกให้ทุกอย่าง หากไม่ถูกใจ<b>ไม่แก้ให้ทุกกรณี</b><br>
       ⚠️ ชำระเงินแล้ว = ยอมรับกฎของทางร้าน
     </div>
-    <a href="https://docs.google.com/spreadsheets/d/1h6n06A4IG4Dn7IYZcLzpEphyuA8YkIHyMAEFw2bEhoQ/edit?usp=drivesdk" class="lnk" target="_blank" style="margin-top:10px;">
-      <span style="font-size:1.2rem;">📊</span>
-      <div><div class="lnk-name">เช็คคิวงานที่นี่</div></div>
-    </a>
   </div>
 
   <div class="cta-wrap" style="text-align:center; margin-top:20px;">
     <a href="https://www.facebook.com/share/1AjUVUizBm/" class="cta-btn" target="_blank">
-      💫 สั่งงาน / สอบถาม 💫
+      🧵 สั่งงานที่นี่ 🧵
     </a>
   </div>
 
