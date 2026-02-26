@@ -96,7 +96,7 @@
     background: linear-gradient(145deg, var(--primary), var(--darker));
     border: 1px solid var(--border);
     border-radius: 18px;
-    padding: 20px 10px;
+    padding: 15px 10px;
     text-decoration: none;
     text-align: center;
     transition: 0.3s;
@@ -107,6 +107,16 @@
     gap: 8px;
   }
   .grid-item:hover { transform: scale(1.03); background: rgba(253, 187, 45, 0.15); }
+  
+  /* แก้ไขให้รูปใน Grid พอดีช่อง */
+  .grid-img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 5px;
+  }
+
   .grid-title { color: var(--accent); font-weight: 700; font-size: 0.95rem; }
   .grid-sub { color: #94a3b8; font-size: 0.7rem; }
 
@@ -139,7 +149,6 @@
   .steps { display:flex; flex-direction:column; gap:11px; }
   .step { display:flex; gap:11px; align-items:flex-start; }
   
-  /* วงกลมตัวเลขสีน้ำเงินดำ */
   .sn {
     width:28px;height:28px;border-radius:50%;
     background: linear-gradient(135deg, #070b1a, #1a2a6c);
@@ -196,29 +205,29 @@
   </div>
 
   <div class="status-box">
-    <div class="s-open"><span class="s-dot"></span>เปิดรับออเดอร์ & ปรึกษาได้ตลอดค่ะ</div>
+    <div class="s-open"><span class="s-dot"></span>✅ เปิดรับออเดอร์ & ปรึกษาได้ตลอดค่ะ</div>
   </div>
 
   <div class="card">
     <div class="ct">💫 บริการและตัวอย่างงานหลัก</div>
     <div class="grid-container">
       <a href="https://drive.google.com/drive/folders/1LUDNOpLgvTbU0evdFBrlsjHTGSzvqJlR" class="grid-item" target="_blank">
-        <span style="font-size:1.8rem;">✨</span>
+        <img src="bg1.jpeg" class="grid-img">
         <div class="grid-title">Scribbles</div>
         <div class="grid-sub">แนวงานหลัก</div>
       </a>
       <a href="https://drive.google.com/drive/folders/1Le0B0Ql4FSXM-1SJXQZqgCtLgocpBdp4" class="grid-item" target="_blank">
-        <span style="font-size:1.8rem;">✨</span>
+        <img src="bg2.jpeg" class="grid-img">
         <div class="grid-title">Aurelia</div>
         <div class="grid-sub">แนวงานหลัก</div>
       </a>
       <a href="https://docs.google.com/spreadsheets/d/1h6n06A4IG4Dn7IYZcLzpEphyuA8YkIHyMAEFw2bEhoQ/edit?usp=drivesdk" class="grid-item" target="_blank">
-        <span style="font-size:1.8rem;">✨</span>
+        <img src="bg3.jpeg" class="grid-img">
         <div class="grid-title">เช็คคิวงาน</div>
         <div class="grid-sub">อัปเดตสถานะ</div>
       </a>
       <a href="https://drive.google.com/drive/folders/15tuYmiiU89W36OW-URROaELfD7rgMv0R" class="grid-item" target="_blank">
-        <span style="font-size:1.8rem;">✨</span>
+        <img src="bg4.jpeg" class="grid-img">
         <div class="grid-title">งานทั่วไป</div>
         <div class="grid-sub">รวมผลงานรอง</div>
       </a>
@@ -226,7 +235,7 @@
   </div>
 
   <div class="card">
-    <div class="ct">📋 วิธีการสั่งงาน (โปรดอ่าน)</div>
+    <div class="ct">📝 วิธีการสั่งงาน (โปรดอ่าน)</div>
     <div class="steps">
       <div class="step">
         <div class="sn">1</div>
@@ -248,17 +257,17 @@
   </div>
 
   <div class="card">
-    <div class="ct">📦 บล็อคและของตกแต่ง</div>
+    <div class="ct">🪽 บล็อคและของตกแต่ง</div>
     <a href="https://drive.google.com/drive/folders/1or5RTLlIciM7VRJsukLMHWWwso9VC71i" class="lnk" target="_blank">
-      <span style="font-size:1.2rem;">🫆</span>
+      <span style="font-size:1.2rem;">🪄</span>
       <div><div class="lnk-name">งานทำบล็อค</div></div>
     </a>
     <a href="https://drive.google.com/drive/folders/1m40PQaAH3HNtpzIawu3_-Wol8-3C3z5C" class="lnk" target="_blank">
-      <span style="font-size:1.2rem;">🧜🏻‍♂️</span>
+      <span style="font-size:1.2rem;">✨</span>
       <div><div class="lnk-name">งานลงสีของตกแต่ง</div></div>
     </a>
     <a href="https://drive.google.com/drive/folders/1Ew0x8gy-6g9WZG5k8CPtOzF0ND1Y-1bY" class="lnk" target="_blank">
-      <span style="font-size:1.2rem;">✨</span>
+      <span style="font-size:1.2rem;">📂</span>
       <div><div class="lnk-name">คลังรวมของแต่ง/ตูน/บล็อค</div></div>
     </a>
   </div>
