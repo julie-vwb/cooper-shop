@@ -8,8 +8,9 @@
 <style>
   :root {
     --primary: #1a2a6c;
-    --secondary: #b21f1f;
+    --darker: #070b1a; /* สีที่เข้มกว่าพื้นหลัง */
     --accent: #fdbb2d;
+    --accent-soft: #fef3c7; /* สีเหลืองอ่อนละมุน */
     --bg-dark: #0f172a;
     --card-bg: rgba(255, 255, 255, 0.08);
     --text: #e2e8f0;
@@ -85,7 +86,7 @@
   .ct { font-size:.98rem; font-weight:600; color:var(--accent); margin-bottom:13px; display:flex; align-items:center; gap:8px; }
 
   .status-box {
-    background: linear-gradient(135deg, rgba(26,42,108,0.5), rgba(178,31,31,0.3));
+    background: linear-gradient(135deg, rgba(26,42,108,0.5), rgba(15,23,42,0.3));
     border: 1px dashed var(--accent); border-radius:16px;
     padding:15px; text-align:center; margin-bottom:14px;
   }
@@ -94,7 +95,8 @@
   @keyframes blink{0%,100%{opacity:1;}50%{opacity:.3;}}
 
   .hi-box {
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f);
+    background: linear-gradient(135deg, var(--primary), var(--darker));
+    border: 1px solid var(--border);
     border-radius:16px; padding:13px 16px; color:#fff;
     text-align:center; margin-bottom:12px;
   }
@@ -114,24 +116,24 @@
   .step { display:flex; gap:11px; align-items:flex-start; }
   .sn {
     width:28px;height:28px;border-radius:50%;
-    background: linear-gradient(135deg, var(--accent), var(--secondary));
+    background: linear-gradient(135deg, var(--accent), var(--primary));
     display:flex;align-items:center;justify-content:center;
     font-size:.78rem;font-weight:600;color:#fff;flex-shrink:0;
   }
   .st { font-size:.84rem; color:var(--text); padding-top:4px; line-height:1.6; }
 
   .note {
-    background: rgba(178, 31, 31, 0.15);
-    border: 1px solid var(--secondary); border-radius:14px;
+    background: rgba(253, 187, 45, 0.05);
+    border: 1px solid var(--border); border-radius:14px;
     padding:13px 15px; font-size:.83rem; color:var(--text); line-height:1.8;
   }
 
   .cta-btn {
     display:inline-block; width:100%; max-width:300px;
-    background: linear-gradient(135deg, #fdbb2d, #b21f1f);
-    color:#fff; font-size:1.1rem; font-weight:600; padding:16px;
+    background: linear-gradient(135deg, var(--accent-soft), var(--accent));
+    color: var(--darker); font-size:1.1rem; font-weight:600; padding:16px;
     border-radius:50px; text-decoration:none;
-    box-shadow:0 10px 25px rgba(178,31,31,0.4);
+    box-shadow:0 10px 25px rgba(0,0,0,0.4);
     animation: glow 3s infinite; text-align: center;
   }
   @keyframes glow{0%,100%{box-shadow:0 8px 20px rgba(253, 187, 45, 0.3);} 50%{box-shadow:0 12px 30px rgba(253, 187, 45, 0.6);}}
@@ -155,7 +157,7 @@
     <div class="shop-name">Coopercliton</div>
     <div class="shop-sub">
       ✨ สวัสดีค่ะ ยินดีต้อนรับสู่ร้านของเป้อนะคะ ✨<br>
-      เม่ค้าใจดี เฟรนลี่ คุยเล่นหรือปรึกษาได้นะคะ
+      แม่ค้าใจดี เฟรนลี่ คุยเล่นหรือปรึกษาได้นะคะ
     </div>
     <div class="badges">
       <span class="badge">🖼️ รับทำงานป้าย</span>
@@ -228,7 +230,7 @@
       <b>ปกติ: 1 - 3 วัน</b><br>
       <small>(หากไม่ติดธุระ 1 วันเสร็จค่ะ)</small>
     </div>
-    <div class="hi-box" style="margin-bottom:0; background: var(--secondary);">
+    <div class="hi-box" style="margin-bottom:0;">
       <b>เร่งด่วน: ราคา x2 (ได้งานวันที่สั่ง)</b>
     </div>
   </div>
