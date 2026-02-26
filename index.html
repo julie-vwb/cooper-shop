@@ -8,9 +8,9 @@
 <style>
   :root {
     --primary: #1a2a6c;
-    --darker: #070b1a; /* สีที่เข้มกว่าพื้นหลัง */
+    --darker: #070b1a; /* สีน้ำเงินดำเข้มกว่าพื้นหลัง */
     --accent: #fdbb2d;
-    --accent-soft: #fef3c7; /* สีเหลืองอ่อนละมุน */
+    --accent-soft: #fef3c7; 
     --bg-dark: #0f172a;
     --card-bg: rgba(255, 255, 255, 0.08);
     --text: #e2e8f0;
@@ -114,12 +114,17 @@
 
   .steps { display:flex; flex-direction:column; gap:11px; }
   .step { display:flex; gap:11px; align-items:flex-start; }
+  
+  /* ปรับสีวงกลมตัวเลขเป็น น้ำเงินดำ */
   .sn {
     width:28px;height:28px;border-radius:50%;
-    background: linear-gradient(135deg, var(--accent), var(--primary));
+    background: linear-gradient(135deg, #070b1a, #1a2a6c);
+    border: 1px solid var(--border);
     display:flex;align-items:center;justify-content:center;
-    font-size:.78rem;font-weight:600;color:#fff;flex-shrink:0;
+    font-size:.78rem;font-weight:600;color:var(--accent);flex-shrink:0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   }
+  
   .st { font-size:.84rem; color:var(--text); padding-top:4px; line-height:1.6; }
 
   .note {
